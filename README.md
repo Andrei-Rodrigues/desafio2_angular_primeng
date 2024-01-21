@@ -25,7 +25,7 @@ Cartão de visita: Cartão de visita composto por duas seções, Informação do
 Para rodar o projeto localmente, siga as instruções abaixo:
 
 Certifique-se de ter o Node.js e o Angular CLI instalados em sua máquina.
-Clone este repositório: git clone [URL do Repositório]
+Clone este repositório: git clone https://github.com/Andrei-Rodrigues/desafio2_angular_primeng
 Navegue até o diretório do projeto: cd business_card
 Instale as dependências: npm install
 Inicie o servidor de desenvolvimento: ng serve --open
