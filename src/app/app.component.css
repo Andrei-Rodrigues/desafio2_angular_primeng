@@ -1,0 +1,53 @@
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.principal_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 750px;
+    height: 500px;
+    margin-top: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+/*Estilo formulario usuario*/
+
+.user_info_style {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.user_info_input{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+/*Estilo formulario endereco*/
+.address_style {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    
+    border-radius: 10px;
+}
+
+.address_input{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+/*Estilo botao*/
+
+.button_style {
+    width: 100px;
+    margin-top: 430px;
+    margin-left: -210px;
+}

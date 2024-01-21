@@ -1,0 +1,59 @@
+<main class="principal">
+  <form [formGroup]="formUserInfo">
+    <div class="principal_form">
+      <i class="pi pi-user" style="font-size: 1.5rem; margin-bottom: 410px;"></i>
+      <div class="user_info_style">
+        <h4>User Info</h4>
+        <label>Name</label>
+        <input pInputText type="text" formControlName="name" placeholder="Name" class="user_info_input" />
+        <label>Age</label>
+        <p-inputNumber formControlName="age" placeholder="Age" class="user_info_input" />
+        <label>phone number</label>
+        <p-inputMask mask="(99) 99999-9999" formControlName="phone_number" placeholder="(99) 99999-9999"
+          class="user_info_input" />
+        <label>E-mail</label>
+        <input pInputText type="text" formControlName="email" placeholder="your@email.com" class="user_info_input" />
+      </div>
+      
+      <div formGroupName="address" class="address_style">
+        <h4>User Address</h4>
+        <label>Street</label>
+        <input pInputText type="text" formControlName="street" placeholder="Street" class="address_input" />
+        <label>Street number</label>
+        <p-inputNumber inputId="street_number" formControlName="number" placeholder="Street number"
+          class="address_input" />
+        <label>Neighborhood</label>
+        <input pInputText type="text" formControlName="neighborhood" placeholder="Neighborhood" class="address_input" />
+        <label>City</label>
+        <input pInputText type="text" formControlName="city" placeholder="City" class="address_input" />
+      </div>
+
+      <p-button label="Create" [disabled]="!formUserInfo.valid" [outlined]="true" (onClick)="onSubmit()" class="button_style" />
+    </div>
+  </form>
+</main>
+
+<!--Business-card-->
+
+<p-dialog header="Business card" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false">
+  <!-- Display User Info in the Modal -->
+  <div *ngIf="userInfo">
+    <h3>Personal Info</h3>
+    <p> Name: {{ userInfo.name }}</p>
+    <p> Age: {{ userInfo.age }}</p>
+    <p> Phone Number: {{ userInfo.phone_number }}</p>
+    <p> Email: {{ userInfo.email }}</p>
+  </div>
+
+  <!-- Display User Address in the Modal -->
+  <div *ngIf="userInfo">
+    <h3>Address</h3>
+    <p> Street: {{ userInfo.address.street }}</p>
+    <p> Street Number: {{ userInfo.address.number }}</p>
+    <p> Neighborhood: {{ userInfo.address.neighborhood }}</p>
+    <p> City: {{ userInfo.address.city }}</p>
+  </div>
+</p-dialog>
+
+<router-outlet></router-outlet>
